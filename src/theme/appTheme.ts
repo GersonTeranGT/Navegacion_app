@@ -1,13 +1,13 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, ImageBackground } from 'react-native';
 
 export const styles = StyleSheet.create({
     container:{
         marginHorizontal:20,
         marginVertical:10,
 
-        backgroundColor:'#ffffff',
+        //backgroundColor:'#ffffff',
         padding:20,
-        borderRadius:20
+        borderRadius:20,
     },
     title:{
         fontSize:30,

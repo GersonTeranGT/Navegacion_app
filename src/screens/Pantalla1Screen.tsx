@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import React from 'react'
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Button, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { styles } from '../theme/appTheme';
 import { RootStackParams } from '../navigator/StackNavigator';
 
@@ -16,11 +16,14 @@ interface Persona {
     apellido: string
 }
 
+
+
+
 export const Pantalla1Screen = ({ navigation }: Props) => {
     //desestructuracion de navigation
     //Tipo any por el momento, Propiedades como valores
     //console.log(props.navigation)
-
+    
     //CREAR OBJETO DE INFORMACION
     const persona: Persona = {
         id: 1,
@@ -34,6 +37,7 @@ export const Pantalla1Screen = ({ navigation }: Props) => {
     }
     return (
         <View style={styles.container}>
+            
             <Text style={styles.title}>Pantalla1 Screen</Text>
             <Button
                 title='Ir pantalla 2'
@@ -47,6 +51,13 @@ export const Pantalla1Screen = ({ navigation }: Props) => {
                 onPress={() => navigation.navigate('Persona2', persona2)}>
                 <Text  style={styles.texto}>Persona 2</Text>
             </TouchableOpacity>
+            <TextInput
+            // style={styles.input}
+            // onChangeText={onChangeNumber}
+            // value={number}
+            placeholder="useless placeholder"
+            keyboardType="numeric"
+        />
         </View>
     )
 }
