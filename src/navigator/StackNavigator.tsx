@@ -37,8 +37,8 @@ export const StackNavigator = () => {
             }
         }}>
             {/* option permite agregar estilos solo a un screen */}
-            <Stack.Screen name="Pantalla1" options={{title:'Home'}} component={Pantalla1Screen} />
-            <Stack.Screen name="Pantalla2" options={{animation:'slide_from_right'}} component={Pantalla2Screen} />
+            <Stack.Screen name="Pantalla1" options={{headerShown: false, title:'Home'}} component={Pantalla1Screen} />
+            <Stack.Screen name="Pantalla2" options={{headerShown: false, animation:'slide_from_right'}} component={Pantalla2Screen} />
             <Stack.Screen name="Pantalla3" options={{headerShown: false,animation:'fade_from_bottom'}} component={Pantalla3Screen} />
             <Stack.Screen name="Persona" options={{animation:'slide_from_right'}} component={PersonaScreen} />
             <Stack.Screen name="Persona2" options={{animation:'slide_from_right'}} component={Persona2Screen} />

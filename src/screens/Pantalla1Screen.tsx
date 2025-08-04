@@ -23,7 +23,7 @@ export const Pantalla1Screen = ({ navigation }: Props) => {
     //desestructuracion de navigation
     //Tipo any por el momento, Propiedades como valores
     //console.log(props.navigation)
-    
+
     //CREAR OBJETO DE INFORMACION
     const persona: Persona = {
         id: 1,
@@ -37,27 +37,30 @@ export const Pantalla1Screen = ({ navigation }: Props) => {
     }
     return (
         <View style={styles.container}>
-            
+
             <Text style={styles.title}>Pantalla1 Screen</Text>
             <Button
                 title='Ir pantalla 2'
                 onPress={() => navigation.navigate('Pantalla2')} />
             <Text style={styles.title}>Navegar con parámetros a otro screen</Text>
-            <TouchableOpacity style={styles.buton}
-                onPress={() => navigation.navigate('Persona', persona)}>
-                <Text  style={styles.texto}>Gerson</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buton}
-                onPress={() => navigation.navigate('Persona2', persona2)}>
-                <Text  style={styles.texto}>Persona 2</Text>
-            </TouchableOpacity>
-            <TextInput
+            <View style={{flexDirection:'row'}}>
+                <TouchableOpacity style={styles.buttonPerson}
+                    onPress={() => navigation.navigate('Persona', persona)}>
+                    <Text style={styles.buttonTextPerson}>Gerson</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonPerson}
+                    onPress={() => navigation.navigate('Persona2', persona2)}>
+                    <Text style={styles.buttonTextPerson}>Kenneth</Text>
+                </TouchableOpacity>
+            </View>
+
+            {/* <TextInput
             // style={styles.input}
             // onChangeText={onChangeNumber}
             // value={number}
             placeholder="useless placeholder"
             keyboardType="numeric"
-        />
+        /> */}
         </View>
     )
 }
